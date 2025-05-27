@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS and bootstrap part 1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Dancing+Script:wght@400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Nabla&display=swap" rel="stylesheet">
+    <style>
+        .box{
+            height: 100px;
+            width: 100px;
+            
+            background-color: aquamarine;
+            /* position: relative; */
+            
+            /* top: 1%; */
+            overflow: hidden;
+
+          
+           
+            /* transform: rotate(45deg); */
+            /* alada likhle overwrite */
+
+             /* transform: rotate(45deg) scale(2); */
+            /* ebhabe ekshate likhte hoi   */
+           
+
+
+            transition:0.9s ease;
+          
+            
+            
+
+
+        }
+        .box:hover{
+
+            /* transform:scale(1.5); */
+             transform: translate(100%,0);
+            height: 300px;
+            width: 200px;
+           
+            
+
+        }
+        .txt{
+            height: 400px;
+            font-size: 20px;
+            width: 490px;
+            text-align: center;
+           /* text-decoration:underline; */
+           text-transform: capitalize;
+           line-height:150px;
+           letter-spacing: 1px;
+           word-spacing: 5px;
+            color: bisque;
+           
+           font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+           
+            background-color: rgb(115, 84, 37);
+            background-image: url(./images/istockphoto-533577883-612x612.jpg);
+            background-size: cover;
+            /* for this, The background image will completely cover the element, keeping its aspect ratio intact.
+            It may be cropped to fill the space without stretching. */
+        }
+        .txt-child-1{
+
+            font-family: Josefin Sans;
+            color: lch(76.12% 29.77 311.44);
+            background-color: rgb(42, 106, 85,0.2);
+            background: linear-gradient(45deg,rgb(121, 10, 185),#ec5e5e);
+            font-size: 0.9rem;
+            line-height: 100px;
+           
+            /* changes with respect to root aka html font size aka 16px */
+
+            font-size: 2em;
+            /* changes with respect to parent font size aka 40px */
+
+            /* filter: grayscale(0.2);
+            filter: blur(10px);
+            filter: invert(); */
+
+        }
+        .box2{
+            background-image:url(./images/images\ \(1\).jpeg);
+            background-size: cover;
+            background-position: center;
+            /* The center part of the image is shown — so the most important area stays visible on all screen sizes. */
+
+            height: 200px;
+            width: 400px;
+            background-color: #ec5e5e;
+            text-align: center;
+           
+        }
+        .btn{
+
+            height: 50px;
+            width: 100px;
+            background: linear-gradient(45deg,rgb(48, 198, 115),rgb(104, 62, 208));
+            color: #ffffff;
+            border-bottom-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            /* box-shadow: 0px 10px 10px 1px rgb(66, 130, 195); */
+
+            
+        }
+        .btn:hover{
+
+            background-color: antiquewhite;
+            color: rgb(10, 12, 4);
+            cursor:pointer;
+            /* cursor: url(./images/cursor.svg),auto; */
+        }
+        
+        :root{
+            --primary-color:#6667AB;
+        }
+        .text{
+            /* position: relative; */
+            /* top: 20px;  */
+            background-color: var(--primary-color);
+             line-height: 2;
+        } 
+
+
+        @keyframes pulse{
+            0%{
+                transform: rotate(0deg);
+            }
+            50%{
+                transform: rotate(180deg);
+            }
+            /* 100%{
+                transform: rotate(360deg);
+            } */
+
+        }
+        .animate{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 10px;
+            left: 50vw;
+            height: 200px;
+            width: 200px;
+            color: black;
+            /* text-align: center; */
+            text-transform: none;
+            /* background:linear-gradient(rgb(200, 104, 104), rgb(186, 161, 102)); */
+            background-color: #ec5e5e;
+
+            animation-name: pulse;
+            animation-timing-function: linear;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+           
+        }
+        /* note that this animation component is a child of txt */
+
+        .animate:hover{
+
+             transition: 1s ease;
+             background-color: #6667AB;
+
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box">
+
+        <!-- hover me and see the magic -->
+        hello guys this is transition property in css. Hover on me to reveal more.
+        <p>Object-oriented programming models real-world objects using classes, encouraging code reuse, encapsulation, and easier maintenance in complex software applications.</p>
+    </div>
+    <div class="txt">Hello this is a text written by me
+
+        <div class="txt-child-1">hey
+
+        </div>
+         <div class="animate">lol i just rotate</div>
+
+    </div>
+    <div class="box2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia voluptates ea aspernatur culpa, modi corporis hic nam dolores aut nobis error rerum ex iste natus ipsa laboriosam quasi eum inventore!</div>
+    <button class="btn">Submit</button>
+    <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae quas, quaerat neque dicta quam natus aut eius maxime eveniet esse fugiat sint unde perferendis reprehenderit pariatur libero vitae ipsum explicabo ea sapiente sunt animi. Labore, omnis voluptatum beatae possimus nemo esse, ut quisquam natus, explicabo distinctio voluptates ipsam veniam sit?</div>
+   
+  
+
+
+   
+</body>
+</html>
